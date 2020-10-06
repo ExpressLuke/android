@@ -243,7 +243,9 @@
   <project path="vendor/qcom/opensource/rcs-service" name="LineageOS/android_vendor_qcom_opensource_rcs-service" />
   
   <!-- Kanged shit -->
-  <project path="packages/apps/SlimRecents" name="amyROM/android_packages_apps_SlimRecents" revision="8.1.x" />
+  <project path="packages/apps/SlimRecents" name="amyROM/android_packages_apps_SlimRecents" revision="8.1.x" remote="github" /> <!-- From AospExtended -->
+  <project path="packages/apps/OmniStyle" name="amyROM/android_packages_apps_OmniStyle" revision="oreo" remote="github" />      <!-- From RR -->
+
   <!-- Infrastructure -->
   <project path="lineage/ansible" name="LineageOS/ansible" groups="infra" revision="master" />
   <project path="lineage/charter" name="LineageOS/charter" groups="infra" revision="master" />
