@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-  <!-- LineageOS additions -->
-  <project path="android" name="LineageOS/android" />
-  <project path="device/lineage/sepolicy" name="LineageOS/android_device_lineage_sepolicy" />
-  <project path="external/bash" name="LineageOS/android_external_bash" />
-  <project path="external/exfat" name="LineageOS/android_external_exfat" /><?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-
+  
+  <remote name="aosp" fetch="https://android.googlesource.com" />
+  
+  <!-- lets replace that shit launcher -->
+  <remove-project name="platform/packages/apps/Trebuchet" />  
+  <project path="packages/apps/Launcher3" name="platform/packages/apps/Launcher3" remote="aosp" revision="oreo-release">
+  
+  <!-- Android x86 -->
+  <remote name="x86" fetch="https://scm.osdn.net/gitroot/android-x86" />
+  <!-- <project path="packages/apps/Taskbar" name="platform/packages/apps/Taskbar" remote="x86" revision="q-x86" /> -->
+  
+  <!-- Stuff from Bliss-OS -->
+  <remote name="BR-x86" fetch="https://github.com/BlissRoms-x86" />
+  <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="BR-x86" revision="q10-04.05.20" />
+  
   <!-- LineageOS additions -->
   <project path="android" name="LineageOS/android" />
   <project path="device/lineage/sepolicy" name="LineageOS/android_device_lineage_sepolicy" />
@@ -58,7 +65,7 @@
   <project path="packages/providers/WeatherProvider" name="LineageOS/android_packages_providers_WeatherProvider" />
   <project path="prebuilts/lineage-sdk" name="LineageOS/android_prebuilts_lineage-sdk" clone-depth="1" />
   <project path="system/extras/su" name="LineageOS/android_system_extras_su" />
-  <project path="vendor/lineage" name="LineageOS/android_vendor_lineage" />
+  <project path="vendor/lineage" name="LineageOS/android_vendor_amy" remote="amyROM"/>
 
   <!-- CodeAurora additions -->
   <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" />
