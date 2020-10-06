@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="github"
-           fetch="github.com"
+           fetch=".."
            review="review.lineageos.org" />
 
   <remote  name="private"
