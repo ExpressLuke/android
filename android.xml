@@ -5,13 +5,6 @@
   <project path="android" name="LineageOS/android" />
   <project path="device/lineage/sepolicy" name="LineageOS/android_device_lineage_sepolicy" />
   <project path="external/bash" name="LineageOS/android_external_bash" />
-  <project path="external/exfat" name="LineageOS/android_external_exfat" /><?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-
-  <!-- LineageOS additions -->
-  <project path="android" name="LineageOS/android" />
-  <project path="device/lineage/sepolicy" name="LineageOS/android_device_lineage_sepolicy" />
-  <project path="external/bash" name="LineageOS/android_external_bash" />
   <project path="external/exfat" name="LineageOS/android_external_exfat" />
   <project path="external/fuse" name="LineageOS/android_external_fuse" />
   <project path="external/htop" name="LineageOS/android_external_htop" />
@@ -53,7 +46,7 @@
   <project path="packages/apps/SetupWizard" name="LineageOS/android_packages_apps_SetupWizard" />
   <project path="packages/apps/Snap" name="LineageOS/android_packages_apps_Snap" />
   <project path="packages/apps/Trebuchet" name="LineageOS/android_packages_apps_Trebuchet" />
-  <project path="packages/apps/Updater" name="LineageOS/android_packages_apps_Updater" />
+  <!-- <project path="packages/apps/Updater" name="LineageOS/android_packages_apps_Updater" />      We dont need OTA rn -->
   <project path="packages/overlays/Lineage" name="LineageOS/android_packages_overlays_Lineage" />
   <project path="packages/providers/WeatherProvider" name="LineageOS/android_packages_providers_WeatherProvider" />
   <project path="prebuilts/lineage-sdk" name="LineageOS/android_prebuilts_lineage-sdk" clone-depth="1" />
@@ -248,7 +241,9 @@
     <copyfile dest="vendor/qcom/opensource/Android.bp" src="os_pickup.bp"/>
   </project>
   <project path="vendor/qcom/opensource/rcs-service" name="LineageOS/android_vendor_qcom_opensource_rcs-service" />
-
+  
+  <!-- Kanged shit -->
+  <project path="packages/apps/SlimRecents" name="amyROM/android_packages_apps_SlimRecents" revision="8.1.x" />
   <!-- Infrastructure -->
   <project path="lineage/ansible" name="LineageOS/ansible" groups="infra" revision="master" />
   <project path="lineage/charter" name="LineageOS/charter" groups="infra" revision="master" />
